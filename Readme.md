@@ -16,8 +16,10 @@ docker-compose exec php bin/console doctrine:fixtures:load
 
 # How to use
 1. Overtime Endpoint Ex:
+
+```
 http://localhost/api/v1/hotel-reviews?hotel_id=1&start_date=2018-01-01&end_date=2020-02-01
- 
+```
 
 ## Tools
 * Symfony 5
