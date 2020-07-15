@@ -116,9 +116,10 @@ class ApiTest extends WebTestCase
         $result= json_decode($this->client->getResponse()->getContent(), true);
 
 
-        $this->assertEquals(2, $result[0]["review_count"]);
-        $this->assertEquals(45, $result[0]["score_avg"]);
-        $this->assertEquals((int)$date->format("W"), $result[0]["date_group"]);
+
+            $this->assertEquals(2, $result["data"][0]["review-count"]);
+        $this->assertEquals(45, $result["data"][0]["average-score"]);
+        $this->assertEquals((int)$date->format("W"), $result["data"][0]["date-group"]);
     }
 
 
@@ -134,12 +135,12 @@ class ApiTest extends WebTestCase
         $result= json_decode($this->client->getResponse()->getContent(), true);
 
 
-        $this->assertEquals(3, $result[0]["review_count"]);
-        $this->assertEquals(61, $result[0]["score_avg"]);
-        $this->assertEquals(3, $result[0]["date_group"]);
+        $this->assertEquals(3, $result["data"][0]["review-count"]);
+        $this->assertEquals(61, $result["data"][0]["average-score"]);
+        $this->assertEquals(3, $result["data"][0]["date-group"]);
 
-        $this->assertEquals(1, $result[1]["review_count"]);
-        $this->assertEquals(50, $result[1]["score_avg"]);
-        $this->assertEquals(4, $result[1]["date_group"]);
+        $this->assertEquals(1, $result["data"][1]["review-count"]);
+        $this->assertEquals(50, $result["data"][1]["average-score"]);
+        $this->assertEquals(4, $result["data"][1]["date-group"]);
     }
 }

@@ -11,6 +11,7 @@ final class HotelReviewsDTO
      */
     public static function fromData(array $data) :array
     {
+        $result= [];
         foreach ($data as $item) {
             $result[]=[
                 'review-count' =>$item["review_count"],

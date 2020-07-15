@@ -6,10 +6,8 @@ RESTful API backend For rating Hotels Feedback.
 ```
 docker-compose build 
 docker-compose up -d
-docker-compose exec php sh
 docker-compose exec php composer install
 docker-compose exec php bin/console doctrine:schema:create
-docker-compose run php php bin/console assets:install
 docker-compose exec php bin/console doctrine:fixtures:load
 
 ```
@@ -43,8 +41,6 @@ https://www.getpostman.com/collections/edde5b4aa7b913be2ac1
 
 ```
 php bin/console doctrine:schema:create --env=test
-bin/console doctrine:fixtures:load --env=test
-docker-compose exec php  bin/phpunit
 
 ```
 
