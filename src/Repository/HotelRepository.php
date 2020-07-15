@@ -70,8 +70,6 @@ class HotelRepository extends ServiceEntityRepository
             $query->addSelect('MONTH(r.created_at) as date_group');
         }
 
-//
-
 
         return $query->where('h.id = :id')
             ->andWhere('r.created_at >= :start_date')
@@ -81,13 +79,8 @@ class HotelRepository extends ServiceEntityRepository
             ->setParameter('id', $hotel_id)
             ->groupBy('h.id,date_group')
             ->orderBy('h.id,date_group', 'ASC')
-//            ->setMaxResults(10)
             ->getQuery()
             ->getResult();
-    }
-
-    function saveReview()
-    {
     }
 
 
