@@ -6,10 +6,11 @@ use App\Entity\Hotel;
 use App\Entity\Review;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 
 class ApiTest extends WebTestCase
 {
-    private $client;
+    private KernelBrowser $client;
 
 
     public function setUp() :void
