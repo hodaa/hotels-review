@@ -1,5 +1,5 @@
 # Hotels  Restful Api
-RESTful API backend For rating Hotels Feedback.
+RESTful API For hotels feedback.
 
 ## Installation
 
@@ -13,7 +13,8 @@ docker-compose exec php bin/console doctrine:fixtures:load
 ```
 
 # How to use
-1. Overtime Endpoint Ex:
+
+Overtime Endpoint Ex:
 
 ```
 http://localhost/api/v1/hotel-reviews?hotel_id=1&start_date=2018-01-01&end_date=2020-02-01
@@ -23,17 +24,13 @@ http://localhost/api/v1/hotel-reviews?hotel_id=1&start_date=2018-01-01&end_date=
 * Symfony 5
 * Docker
 * PHP7.4
-* Doctine
+* Doctrine
 * Mysql
-
-
-
 
 
 ##  APi Collection
 
 ```
-
 https://www.getpostman.com/collections/edde5b4aa7b913be2ac1
 ```
 
@@ -41,6 +38,5 @@ https://www.getpostman.com/collections/edde5b4aa7b913be2ac1
 
 ```
 php bin/console doctrine:schema:create --env=test
-
 ```
 
