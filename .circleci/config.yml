@@ -44,7 +44,7 @@ jobs:
 
       # prepare the database
       - run: touch testing.sqlite
-      - run: bin/console doctrine:migrations:migrate --env=testing
+      #- run: bin/console doctrine:migrations:migrate --env=testing
 
       # run tests with phpunit or codecept
       - run: bin/phpunit
